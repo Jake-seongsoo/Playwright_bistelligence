@@ -6,6 +6,9 @@
     "wrongid_duplicate": "admin",
     "email":"shark10111@naver.com",
     "wrongemail":"shark1011",
-    "password": "&ianyang2010"
-    
+    "password": "&ianyang2010",
+    "wrongpassword_min": "abcd",
+    "wrongpassword_over": "abcdeabcdeabcdeabcdeabcde",
+    "wrongpassword_x_special": "qwe123qaw",
+    "wrongpassword_checkKor": "&iany김201"
 }

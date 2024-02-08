@@ -42,16 +42,40 @@ export default class RegisterPage{
     async focusoutEmail() {
         await this.page.getByPlaceholder("Please enter email").blur()
     }
-    validateemail(){
+    validateEmail(){
         return this.page.getByLabel('Create AccountCloseCreate').locator('#email_help')
     }
     async enterPassword(password: string) {
         await this.page.getByPlaceholder("Please enter password")
                   .type(password);
     }
+    async focusPassword() {
+        await this.page.getByPlaceholder("Please enter password").focus()
+    }
+    async focusoutPassword() {
+        await this.page.getByPlaceholder("Please enter password").blur()
+    }
+    validatePassword(){
+        return this.page.getByLabel('Create AccountCloseCreate').locator('#password_help')
+    }
+    async clearPassword() {
+        await this.page.getByPlaceholder("Please enter password").clear()
+    }
     async enterConfirmPassword(confirmpassword: string) {
         await this.page.getByPlaceholder("Please enter confirm password")
                   .type(confirmpassword);
+    }
+    async focusConfirmPassword() {
+        await this.page.getByPlaceholder("Please enter confirm password").focus()
+    }
+    async focusoutConfirmPassword() {
+        await this.page.getByPlaceholder("Please enter confirm password").blur()
+    }
+    validateConfirmPassword(){
+        return this.page.getByLabel('Create AccountCloseCreate').locator('#confirmPassword_help')
+    }
+    async clearConfirmPassword() {
+        await this.page.getByPlaceholder("Please enter confirm password").clear()
     }
     async clickConfirm(){
         this.page.getByRole('button', { name: 'check Create' }).click();     
