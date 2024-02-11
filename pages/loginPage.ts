@@ -13,19 +13,28 @@ export default class LoginPage{
         await this.page.locator("#password")
               .type(password);
     }
-    async clickLoginBtn(){
-        await this.page.click("ant-form-item-control-input-content")
-    }
     validateID(){
-        return this.page.getByText('Username is required').locator('#username_help')
+        return this.page.locator('css=div[id="username_help"] div')
     }
     validatePassword(){
-        return this.page.getByText('Password is required').locator('#password_help')
+        return this.page.locator('css=div[id="password_help"] div')
     }
     async focusLoginID(){
         await this.page.getByPlaceholder('Enter User ID').focus();
     }
     async focusoutLoginID(){
-        await this.page.getByPlaceholder('Enter Password').blur();
+        await this.page.getByPlaceholder('Enter User ID').blur();
+    }
+    async focusLoginPassword(){
+        await this.page.getByPlaceholder("Enter Password").focus();
+    }
+    async focusoutLoginPassword(){
+        await this.page.getByPlaceholder("Enter Password").blur();
+    }
+    wrongInputPopup(){
+        return this.page.locator('css=body div div[class="gv-massage-body"] div div:nth-child(1)')// 이름이 gv-description인 span 태그 class안의 div 태그 안의 div 태그 찾기 
+    }
+    async clickbtnlogin(){
+        await this.page.locator('css=div[class *= login_btn] button').click(); // class 이름이 login_btn 이라는 단어가 포함된 div 태그 안의 button 태그 찾기.
     }
 }

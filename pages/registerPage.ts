@@ -3,7 +3,7 @@ export default class RegisterPage{
 
     constructor(public page: Page) {}
 
-    async createuserBtn() {
+    async btncreateuser() {
         await this.page.getByText("Create Account").click();
     }
     async enterID(id: string) {
@@ -77,7 +77,7 @@ export default class RegisterPage{
     async clearConfirmPassword() {
         await this.page.getByPlaceholder("Please enter confirm password").clear()
     }
-    async clickConfirm(){
+    async clickConfirmbtn(){
         this.page.getByRole('button', { name: 'check Create' }).click();     
     }
     isConfirmbuttonEnabled(){

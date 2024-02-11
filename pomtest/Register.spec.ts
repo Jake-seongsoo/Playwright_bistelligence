@@ -4,7 +4,7 @@ import * as data from "../test-data/login.json"
 test.describe("podo Register function Test", async() => {
     test("login",async({page, baseURL, registerpage}) => {
         await page.goto(`${baseURL}`);
-        await registerpage.createuserBtn();
+        await registerpage.btncreateuser();
         await registerpage.enterID(data.id);
         await registerpage.enterFullName(data.firstname);
         await registerpage.enterEmail(data.email);
@@ -12,11 +12,11 @@ test.describe("podo Register function Test", async() => {
         await registerpage.enterConfirmPassword(data.password);
         await registerpage.focusoutID();
         expect(registerpage.isConfirmbuttonEnabled()).toBeEnabled();
-        await registerpage.clickConfirm();
+        await registerpage.clickConfirmbtn();
     }) 
     test("register_ID_validationError",async({page, baseURL, registerpage}) => {
         await page.goto(`${baseURL}`);
-        await registerpage.createuserBtn();
+        await registerpage.btncreateuser();
         await registerpage.focusoutID();
         expect(registerpage.validateID()).toBeVisible();
         expect(registerpage.validateID()).toHaveText("User ID is required."); //mv001
@@ -46,7 +46,7 @@ test.describe("podo Register function Test", async() => {
 
     test("register_full_name_validationError",async({page, baseURL, registerpage}) => {
         await page.goto(`${baseURL}`);
-        await registerpage.createuserBtn();
+        await registerpage.btncreateuser();
         await registerpage.focusFullname();
         await registerpage.focusoutFullname();
 
@@ -57,7 +57,7 @@ test.describe("podo Register function Test", async() => {
     })
     test("register_email_validationError",async({page, baseURL, registerpage}) => {
         await page.goto(`${baseURL}`);
-        await registerpage.createuserBtn();
+        await registerpage.btncreateuser();
         await registerpage.focusEmail();
         await registerpage.focusoutEmail();
         
@@ -76,7 +76,7 @@ test.describe("podo Register function Test", async() => {
     })
     test("register_password_validationError",async({page, baseURL, registerpage}) => {
         await page.goto(`${baseURL}`);
-        await registerpage.createuserBtn();
+        await registerpage.btncreateuser();
 
         await registerpage.focusPassword();
         await registerpage.focusoutPassword();
@@ -118,7 +118,7 @@ test.describe("podo Register function Test", async() => {
     })
     test("register_confirm_password_validationError",async({page, baseURL, registerpage}) => {
         await page.goto(`${baseURL}`);
-        await registerpage.createuserBtn();
+        await registerpage.btncreateuser();
         await registerpage.focusConfirmPassword();
         await registerpage.focusoutConfirmPassword();
         
