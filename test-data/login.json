@@ -10,5 +10,6 @@
     "wrongpassword_min": "abcd",
     "wrongpassword_over": "abcdeabcdeabcdeabcdeabcde",
     "wrongpassword_x_special": "qwe123qaw",
-    "wrongpassword_checkKor": "&iany김201"
+    "wrongpassword_checkKor": "&iany김201",
+    "successPassword": "Aidentyx01!"
 }

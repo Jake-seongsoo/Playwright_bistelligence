@@ -13,6 +13,9 @@ export default class RegisterPage{
     async clearID() {
         await this.page.getByPlaceholder("Please enter user ID").clear()
     }
+    async focusID(){
+        await this.page.getByPlaceholder("Please enter user ID").focus()
+    }
     async focusoutID() {
         await this.page.getByPlaceholder("Please enter user ID").blur()
     }
