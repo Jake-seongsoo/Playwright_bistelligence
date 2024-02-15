@@ -24,7 +24,7 @@ test.describe("podo Login function Test", async() => {
         expect(loginpage.welcomeInputPopup()).toHaveText('User ID or password is incorrect.')
     }) 
     test("[FRONT] Login004: successful_login",async({page, baseURL, loginpage}) => {
-        await page.goto(`${baseURL}`);
+        await page.goto(`${baseURL}`); 
         await loginpage.enterusername(data.wrongid_duplicate);
         await loginpage.enterpassword(data.successPassword);
         await loginpage.clickbtnlogin();

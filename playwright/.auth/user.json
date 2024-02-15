@@ -1,0 +1,85 @@
+{
+  "cookies": [
+    {
+      "name": "I18N_LANG",
+      "value": "en",
+      "domain": "prototype.westus.cloudapp.azure.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LOGIN_TOKEN",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsYXN0X2xvZ2luX3RpbWUiOjE3MDc5ODMyNTM4OTQsInVzZXJfbmFtZSI6ImFkbWluIiwibGFzdF9sb2dpbl9pcCI6IjEuMjI3LjU3LjY2Iiwic2NvcGUiOlsid3JpdGUiXSwiZXhwIjoxNzA4MDcwNzAzLCJvcmdfY29kZXMiOlsiREVGQVVMVF9PUkciXSwiYXV0aG9yaXRpZXMiOlsiUEVSTV9TWVNURU1fTUFOQUdFX0xPQ0FUSU9OIiwiU3lzdGVtLUFkbWluIiwiUEVSTV9TWVNURU1fTUFOQUdFX0FQUCIsIlBFUk1fU1lTVEVNX01BTkFHRV9BU1NFVCJdLCJqdGkiOiJjZDNjODdlMC1iNzE5LTRjMzEtOGY5OC1kZThhZGRiZGE4NDQiLCJjbGllbnRfaWQiOiJwb2RvX3RydXN0ZWQifQ.FZHmN94f42F-Emf1q8ASRRUl2yyllHJmBWBGPPqpS04",
+      "domain": "prototype.westus.cloudapp.azure.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LOGIN_USER_ID",
+      "value": "admin",
+      "domain": "prototype.westus.cloudapp.azure.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LOGIN_TOKEN_TYPE",
+      "value": "bearer",
+      "domain": "prototype.westus.cloudapp.azure.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "REFRESH_LOGIN_TOKEN",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsYXN0X2xvZ2luX3RpbWUiOjE3MDc5ODMyNTM4OTQsInVzZXJfbmFtZSI6ImFkbWluIiwibGFzdF9sb2dpbl9pcCI6IjEuMjI3LjU3LjY2Iiwic2NvcGUiOlsid3JpdGUiXSwiYXRpIjoiY2QzYzg3ZTAtYjcxOS00YzMxLThmOTgtZGU4YWRkYmRhODQ0IiwiZXhwIjoxNzEwNTc2MzAzLCJvcmdfY29kZXMiOlsiREVGQVVMVF9PUkciXSwiYXV0aG9yaXRpZXMiOlsiUEVSTV9TWVNURU1fTUFOQUdFX0xPQ0FUSU9OIiwiU3lzdGVtLUFkbWluIiwiUEVSTV9TWVNURU1fTUFOQUdFX0FQUCIsIlBFUk1fU1lTVEVNX01BTkFHRV9BU1NFVCJdLCJqdGkiOiJhODFjNTQ4Zi1mZTNjLTRlMmUtYmZmMS1lZjQxYmEyZTgyZTYiLCJjbGllbnRfaWQiOiJwb2RvX3RydXN0ZWQifQ.S-QmfNDUjp1RMwTeYGRfh_N07IKcTbUdcls2LLO6SHM",
+      "domain": "prototype.westus.cloudapp.azure.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LOGIN_USER_IMAGE_URL",
+      "value": "",
+      "domain": "prototype.westus.cloudapp.azure.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LOGIN_USER_FULL_NAME",
+      "value": "Administrator",
+      "domain": "prototype.westus.cloudapp.azure.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://prototype.westus.cloudapp.azure.com:30000",
+      "localStorage": [
+        {
+          "name": "gvi_personalization_config",
+          "value": "{\"version\":\"gvi_1.0\",\"language\":\"en\",\"allLanguage\":false,\"dashboard\":{\"sortByFilter\":\"default\",\"viewTypes\":[\"ALARM\",\"STATUS\",\"TEMPERATURE\",\"QUANTITY\",\"DEFAULT\"],\"healthColumn\":\"assetName,type,assetScore\",\"healthSort\":\"health,desc\",\"locationStatusType\":\"HEALTH\",\"showAssetsSummary\":true,\"sensorSortByAsset\":\"statusName,asc\",\"sensorSortByParameter\":\"statusName,asc\"},\"apm\":{\"overview\":{\"widgets\":[]}},\"charts\":[]}"
+        }
+      ]
+    }
+  ]
+}

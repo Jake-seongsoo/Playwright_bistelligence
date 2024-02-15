@@ -2,11 +2,13 @@ import {test as baseTest} from "@playwright/test";
 import RegisterPage from "../pages/registerPage"
 import LoginPage from "../pages/loginPage";
 import ResetpasswordPage from "../pages/resetpasswordPage";
+import ContextPage from "../pages/ameta_ContextPage";
 
 type pages= {
     registerpage: RegisterPage;
     loginpage: LoginPage;
     resetpasswordpage: ResetpasswordPage;
+    contextpage: ContextPage;
 }
 const welcomepages= baseTest.extend<pages>({
 
@@ -18,8 +20,15 @@ const welcomepages= baseTest.extend<pages>({
      },
      resetpasswordpage: async({page},use) => {      //Use는 overide 개념
       await use(new ResetpasswordPage(page));
-     }
+     },
+     contextpage: async({browser,page},use) => {
+      const context = await browser.newContext({storageState:'playwright/.auth/user.json' })
+      const contextpage= new ContextPage(await context.newPage());     
+      await use(contextpage);
+      await context.close();
+     },
 })
 
+export const setup = welcomepages;
 export const test = welcomepages;
 export const expect = welcomepages.expect;

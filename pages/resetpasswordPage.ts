@@ -39,7 +39,10 @@ export default class ResetpasswordPage{
         return this.page.getByLabel('Reset Password').locator('#email_help')
     }
     async clickSendEmailbtn(){
-        this.page.getByRole('button', { name: 'check Send Email' }).click();     
+        await Promise.all([
+            this.page.getByRole('button', { name: 'check Send Email' }).click(),
+            this.page.waitForSelector('div[class*="ant-message-success"]',{state:'visible'}) //Toast Success message on save successfully
+        ])
     }
     isSendEmailbtnEnabled(){
         return this.page.getByRole('button', { name: 'check Send Email' });
