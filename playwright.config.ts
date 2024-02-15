@@ -11,7 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './pomtest',
-  testMatch: 'Context.spec.ts', //'*.ts'
+  testMatch: '*.ts',
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -31,21 +31,21 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
     baseURL: 'http://prototype.westus.cloudapp.azure.com:30000/',
     screenshot: 'only-on-failure'
   },
 
   /* Configure projects for major browsers */
   projects: [
- /*   {
+    {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
     launchOptions: { 
       slowMo: 1000,
     } },
     },
-*/
+/*  
     {
      name: 'setup', testMatch: /.*\.setup\.ts/ },
 
@@ -61,7 +61,7 @@ export default defineConfig({
         },
         dependencies: ['setup'],
       },
-/*  
+  
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },

@@ -21,7 +21,7 @@ const welcomepages= baseTest.extend<pages>({
      resetpasswordpage: async({page},use) => {      //Use는 overide 개념
       await use(new ResetpasswordPage(page));
      },
-     contextpage: async({browser,page},use) => {
+     contextpage: async({browser},use) => {
       const context = await browser.newContext({storageState:'playwright/.auth/user.json' })
       const contextpage= new ContextPage(await context.newPage());     
       await use(contextpage);
