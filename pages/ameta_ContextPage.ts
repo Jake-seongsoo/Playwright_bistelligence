@@ -22,12 +22,7 @@ export default class ContextPage{
     {
         return await this.page.frame({url:'http://prototype.westus.cloudapp.azure.com:30000/ameta/index.html'});
     }
-    get_fist_Column(promise)
-    {
-        return promise.locator("//span[normalize-space()='Context Name']")
-    }
-    async Click_Add_Context_btn(promise)
-    {
-        await promise.locator("//span[contains(text(),'Add Context')]")
-    }
+    get_fist_Column:string = "css= thead tr th div span[class*='ant-table-column-title']"
+    btn_Add_Context:string = 'plus Add Context'
+    label_add_context:string = "div [class*='context-detail__start'] form div div[class*='management-header-module__title'] span[class*='management-header-module__title']"
 }

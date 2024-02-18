@@ -11,7 +11,7 @@ test.describe("ameta Context function Test", async() => {
        const frame= await contextpage.get_frames();
        if(frame !=null) 
        {
-         contextpage.get_fist_Column(frame);
+        expect(frame.frameLocator(contextpage.get_fist_Column),"Context Name")
        }
         else throw new Error("No such frames")
     })
@@ -22,7 +22,8 @@ test.describe("ameta Context function Test", async() => {
        const frame= await contextpage.get_frames();
        if(frame !=null) 
        {
-        
+        await frame.getByRole('button', { name: contextpage.btn_Add_Context }).click();
+        expect(frame.frameLocator(contextpage.label_add_context),"Add Context")
        }
         else throw new Error("No such frames")
     })
