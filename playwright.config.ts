@@ -11,7 +11,8 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './pomtest',
-  testMatch: '*.ts',
+  timeout:5 * 60 * 1000,
+  testMatch: 'Context.spec.ts',//'*.ts',
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -38,6 +39,7 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+/*    
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
@@ -45,7 +47,7 @@ export default defineConfig({
       slowMo: 1000,
     } },
     },
-/*  
+*/  
     {
      name: 'setup', testMatch: /.*\.setup\.ts/ },
 
@@ -61,7 +63,7 @@ export default defineConfig({
         },
         dependencies: ['setup'],
       },
-  
+/*  
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },

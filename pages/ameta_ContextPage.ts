@@ -2,6 +2,7 @@ import {Page} from "@playwright/test";
 export default class ContextPage{
     constructor(public page:Page) {
     }
+    
     async ShowGNB(){
         await Promise.all([
             this.page.waitForSelector("header[class *= 'gv_black_header'] span[class*='anticon-menu']",{state:"visible"}),
@@ -17,7 +18,16 @@ export default class ContextPage{
         this.page.waitForLoadState('networkidle')
         ])
      }
-    displayed_table(){
-        return this.page.locator("th div span[class*=ant-table-column-title]").nth(0);
+    async get_frames()
+    {
+        return await this.page.frame({url:'http://prototype.westus.cloudapp.azure.com:30000/ameta/index.html'});
+    }
+    get_fist_Column(promise)
+    {
+        return promise.locator("//span[normalize-space()='Context Name']")
+    }
+    async Click_Add_Context_btn(promise)
+    {
+        await promise.locator("//span[contains(text(),'Add Context')]")
     }
 }
